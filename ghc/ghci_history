@@ -1,0 +1,14 @@
+:q
+:t clearBit
+:t putStrLn
+clearBit 33 0
+shiftL 32 1
+import Data.Bits
+main
+:load hello.hs
+double 2
+double x = x + x
+clear
+putStr "Hello, world!"
+putStrLn "Hello, world!"
+1 + 1
