@@ -7,8 +7,8 @@ lalt - n : yabai -m space --focus next; sketchybar --trigger space_change
 
 # Custom space reorganization
 
-# shift + lalt - p : yabai -m space --move prev; sketchybar --reload
-# shift + lalt - n : yabai -m space --move next; sketchybar --reload
+ctrl + lalt - p : yabai -m window --space prev; yabai -m space --focus prev; sketchybar --reload
+ctrl + lalt - n : yabai -m window --space next; yabai -m space --focus next; sketchybar --reload
 
 # Window Navigation (through display borders): lalt - {h, j, k, l}
 lalt - h    : yabai -m window --focus west  || yabai -m display --focus west
