@@ -57,19 +57,19 @@ sbar.add("item", {
   position = "popup." .. media_cover.name,
   icon = { string = icons.media.back },
   label = { drawing = false },
-  click_script = "nowplaying-cli previous",
+  click_script = "media-control previous-track",
 })
 sbar.add("item", {
   position = "popup." .. media_cover.name,
   icon = { string = icons.media.play_pause },
   label = { drawing = false },
-  click_script = "nowplaying-cli togglePlayPause",
+  click_script = "media-control toggle-play-pause",
 })
 sbar.add("item", {
   position = "popup." .. media_cover.name,
   icon = { string = icons.media.forward },
   label = { drawing = false },
-  click_script = "nowplaying-cli next",
+  click_script = "media-control next-track",
 })
 
 local interrupt = 0

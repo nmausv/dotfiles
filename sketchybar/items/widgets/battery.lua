@@ -33,8 +33,6 @@ local remaining_time = sbar.add("item", {
 battery:subscribe({"routine", "power_source_change", "system_woke"}, function()
   sbar.exec("pmset -g batt", function(batt_info)
 
-    -- local batt_info = "Now drawing from 'Battery Power' -InternalBattery-0 (id=8585315)        63%; discharging; 6:25 remaining present: true"
-
     print(batt_info)
 
     local icon = "!"
