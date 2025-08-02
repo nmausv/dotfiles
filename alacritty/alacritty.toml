@@ -4,7 +4,7 @@ blinking = "Off"
 shape = "Block"
 
 [font]
-size = 20.0
+size = 24.0
 
 [font.bold]
 family = "Liga SFMono Nerd Font"
