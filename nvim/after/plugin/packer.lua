@@ -29,6 +29,8 @@ require('packer').startup(function(use)
   use 'folke/neodev.nvim'
   -- Go Plugin
   use 'ray-x/go.nvim'
+  -- Lean Plugin
+  use 'Julian/lean.nvim'
   -- nvim CMP plugins
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
