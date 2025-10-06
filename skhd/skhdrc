@@ -115,7 +115,7 @@ open < k :
 
 # open discord
 open < d :
-  open -a Discord.app \
+  open -a Vesktop.app \
   ; skhd -k "escape"
 
 # open spotify
