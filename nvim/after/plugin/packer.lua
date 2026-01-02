@@ -24,7 +24,7 @@ require('packer').startup(function(use)
   -- LSP Plugins
   use 'neovim/nvim-lspconfig'
   -- Rust Plugin
-  use 'simrat39/rust-tools.nvim'
+  use 'mrcjkb/rustaceanvim'
   -- Lua Plugin
   use 'folke/neodev.nvim'
   -- Go Plugin

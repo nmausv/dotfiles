@@ -88,8 +88,29 @@ vim.api.nvim_set_option('updatetime', 300)
 
 
 -- Setup language servers.
-local lspconfig = require('lspconfig')
-lspconfig.pylsp.setup {
+
+-- not needed anymore due to new rust plugin
+-- vim.lsp.config('rust_analyzer', {
+--   settings = {
+--     ['rust-analyzer'] = {
+--       checkOnSave = true,
+--       check = {
+--         command = "clippy"
+--       },
+--       procMacro = {
+--         enable = true,
+--       },
+--     }
+--   },
+-- })
+-- vim.lsp.enable('rust_analyzer')
+
+vim.lsp.enable('asm_lsp')
+vim.lsp.enable('clangd')
+vim.lsp.config('ocamllsp', {
+  ['cmd'] = { 'ocamllsp' }
+})
+vim.lsp.config('pylsp', {
   on_attach = custom_attach,
   settings = {
     pylsp = {
@@ -114,30 +135,11 @@ lspconfig.pylsp.setup {
   flags = {
     debounce_text_changes = 200,
   },
-}
-lspconfig.ocamllsp.setup {
-  ['cmd'] = { 'ocamllsp' }
-}
-lspconfig.asm_lsp.setup {}
-lspconfig.clangd.setup {}
---[[
-lspconfig.rust_analyzer.setup {
-  settings = {
-    ['rust-analyzer'] = {
-      checkOnSave = {
-        command = 'clippy',
-      },
-      procMacro = {
-        enable = true,
-      },
-    }
-  },
-}
-]]
-lspconfig.hls.setup {
+})
+vim.lsp.config('hls', {
   filetypes = { 'haskell', 'lhaskell', 'cabal' }
-}
-lspconfig.millet.setup {
+})
+vim.lsp.config('millet', {
   name = 'millet',
   cmd = { 'millet-ls' },
   filetypes = { 'sml', 'sig', 'mlb', 'cm' },
@@ -154,9 +156,9 @@ lspconfig.millet.setup {
       ignore = 'after-syntax'
     },
   },
-}
-lspconfig.lua_ls.setup {}
-lspconfig.gopls.setup {}
+})
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('gopls')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

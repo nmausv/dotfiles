@@ -17,7 +17,7 @@ require("obsidian").setup({
         },
         {
             name = "school",
-            path = "~/Documents/School/CMU"
+            path = "~/Documents/records/School/CMU"
         },
     },
 

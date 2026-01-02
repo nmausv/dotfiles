@@ -1,3 +1,4 @@
+
 require('go').setup()
 
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
